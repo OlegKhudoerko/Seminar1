@@ -8,23 +8,13 @@ a = 2 b = 10 -> max = 10
 a = -9 b = -3 -> max = -3
 
 */
+
 Console.WriteLine("Введите число а: ");
 int number_a = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine("Введите число b: ");
 int number_b = Convert.ToInt32(Console.ReadLine());
 
-if (number_a > number_b)
-{
-    Console.WriteLine("a = " + number_a + "; b = " + number_b + "  -> max = " + number_a + " (a>b)");
-}
+if (number_a > number_b) Console.WriteLine($"a = {number_a}; b = {number_b} -> max = {number_a}");
 
-else if (number_a < number_b)
-{
-    Console.WriteLine("a = " + number_a + "; b = " + number_b + "  -> max = "+ number_b + " (a<b)");
-}
-
-if (number_a == number_b)
-{
-    Console.WriteLine("a = " + number_a + "; b = " + number_b + "  -> max = " + number_a + " (Оба числа равны)");
-}
+else Console.WriteLine($"a = {number_a}; b = {number_b} -> max = {number_b}");
