@@ -16,18 +16,10 @@ int number_b = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите третье число: ");
 int number_c = Convert.ToInt32(Console.ReadLine());
 
-if (number_a > number_b && number_a > number_c)
-{
-    Console.WriteLine(number_a + ", " + number_b + ", " + number_c + ", " + " ->  " + number_a);
-}
+if (number_a > number_b && number_a > number_c) Console.WriteLine($"{number_a}, {number_b}, {number_c} -> {number_a}");
+
 else
 {
-    if (number_b > number_a && number_b > number_c)
-    {
-        Console.WriteLine(number_a + ", " + number_b + ", " + number_c + ", " + " -> " + number_b);
-    }
-    else
-    {
-        Console.WriteLine(number_a + ", " + number_b + ", " + number_c + ", " + " -> " + number_c);
-    }
+    if (number_b > number_a && number_b > number_c) Console.WriteLine($"{number_a}, {number_b}, {number_c} -> {number_b}");
+        else Console.WriteLine($"{number_a}, {number_b}, {number_c} -> {number_c}");
 }
