@@ -10,15 +10,15 @@
 
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-int i = 2;
+int counter = 2;
 if (number > 1) //Избегаем кофликт, значение на входе не соответствующее условию задачи
 {
-    Console.Write(number + " -> ");
-    while (i+2 < number)
-{
-  Console.Write(i + ", ");
-   i = i + 2;
+    Console.Write($"{number} -> ");
+    while (counter + 2 <= number)
+    {
+        Console.Write($"{counter}, ");
+        counter = counter + 2;
+    }
+      Console.Write(counter); //Избавляемся от запятой в цикле, последнее значение счетика
 }
-Console.Write(i); //Избавляемся от запятой в цикле, последнее значение счетика
-}
-else Console.Write(number + " -> Ваше число меньше минимального положительного целого четного числа");
+else Console.Write(number + " -> -1 (Ваше число меньше минимального положительного целого четного числа)");
